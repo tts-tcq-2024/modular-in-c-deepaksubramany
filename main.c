@@ -2,7 +2,6 @@
 #include <assert.h>
 #include "color_codes.h"
 
-// Tests number to pair conversion
 void testNumberToPair(int pairNumber, enum MajorColor expectedMajor, enum MinorColor expectedMinor) {
     ColorPair colorPair = GetColorFromPairNumber(pairNumber);
     char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
@@ -12,7 +11,6 @@ void testNumberToPair(int pairNumber, enum MajorColor expectedMajor, enum MinorC
     assert(colorPair.minorColor == expectedMinor);
 }
 
-// Tests pair to number conversion
 void testPairToNumber(enum MajorColor major, enum MinorColor minor, int expectedPairNumber) {
     ColorPair colorPair;
     colorPair.majorColor = major;
@@ -23,7 +21,7 @@ void testPairToNumber(enum MajorColor major, enum MinorColor minor, int expected
 }
 
 int main() {
-    // Run tests
+
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
     testPairToNumber(BLACK, ORANGE, 12);
